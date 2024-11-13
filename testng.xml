@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+    <listeners>
+        <listener class-name="resources.listerners.Listerners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Test Suite for User Sign-In and Account Creation">
+        <classes>
+            <class name="tests.UserSignInTest">
+                <methods>
+                    <include name="successfullyUserSignin"/>
+                </methods>
+            </class>
+            <class name="tests.CreateAccountTest">
+                <methods>
+                    <include name="testUserRegister"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
